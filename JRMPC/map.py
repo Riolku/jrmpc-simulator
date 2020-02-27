@@ -8,6 +8,7 @@ class Map:
         self.cells = {}
         self.extent = None
         self.time = None
+        self.steps = None
 
         self.init_grid(path)
 
@@ -50,7 +51,7 @@ class Map:
             if rb.location == (r, c):
                 ans += rb.identifier
 
-        return ans + " " * (15 - len(ans))
+        return ans + " " * (5 - len(ans))
 
     def draw_grid(self):
         clr()

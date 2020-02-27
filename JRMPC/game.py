@@ -22,6 +22,8 @@ for i in range(rcount):
 
 
 for cycle in range(mp.time):
+    mp.steps = mp.time - cycle
+    
     for ri in range(rcount):
         if robots[ri].dead: 
             robots[ri].direction = (0, 0)
@@ -62,7 +64,7 @@ for cycle in range(mp.time):
 
     mp.draw_grid()
 
-    slp(0.5)
+    slp(0.1)
 
 print("------------------------------\nScores\n------")
 
